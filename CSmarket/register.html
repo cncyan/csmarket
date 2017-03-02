@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CS market--register</title>
+    <link rel="stylesheet" href="css/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/check.css">
+</head>
+<body class="loginbody">
+<div class="register-main">
+
+        <h3>-------欢迎注册CS market系统-------</h3>
+        <form role="form" action="" method="post" onsubmit="return checkform()">
+                <input class="incon" type="text" id="username" name="username" placeholder="用户名">
+                <input class="incon" type="email" id="email" name="email" placeholder="邮箱">
+                <input class="incon" type="password" id="pwd" name="pwd" placeholder="密码">
+                <input class="incon" type="password" id="repwd" name="repwd" placeholder="确认密码">
+                <input class="btnincon" name="register" type="submit" value="注册">
+                <hr style="height:1px;border:none;border-top:1px solid darkgray;" />
+                <p class="fc"><a class="acon" href="login.html">已注册？去登陆</a> </p>
+        </form>
+
+</div>
+<script src="js/jquery-1.10.2.min.js"></script>
+<script>
+    function checkform(){
+        var $uname=$("#username");
+        var $pwd=$("#pwd");
+        var $repwd=$("#repwd");
+        if($uname.val()=='' || $uname.val()==null){
+            alert("用户名不为空！");
+            $uname.focus();
+            return false;
+        }
+        if($uname.val().length>15 || !$uname.val().match(/[A-Z]/gi)){
+            alert("用户名必须为英文且不可大于15字符！");
+            $uname.focus();
+            return false;
+        }
+        if($pwd.val()=="" || $pwd.val()==null){
+            alert("密码不可为空！");
+            $pwd.focus();
+            return false;
+        }
+        if($repwd.val()=="" || $repwd.val()==null){
+            alert("密码不可为空！");
+            $repwd.focus();
+            return false;
+        }
+        if($pwd.val()!=$repwd.val()){
+            alert("密码与确认密码不同！");
+            $repwd.focus();
+            return false;
+        }
+    }
+</script>
+</body>
+</html>
