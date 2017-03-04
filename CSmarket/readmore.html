@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>文章列表</title>
+    <link rel="stylesheet" href="css/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/readmore.css">
+</head>
+<body>
+<div class="headertop">
+    <ul class="mynav" id="mynav">
+        <li class="now"><a href="#">服务商库 |</a></li>
+        <li><a href="#">需求大厅 |</a></li>
+        <li><a href="#">代办中心 |</a></li>
+        <li><a href="#">CyanScikit自营 |</a></li>
+        <li><a href="#">发布需求 |</a></li>
+        <li><a href="#">发布需求 </a></li>
+    </ul>
+</div>
+<div class="essay-cantainer">
+    <div class="easy-main">
+        <ul class="essay-list list-group">
+            <li class="list-group-item">
+                <a href="" class="eassy-title">结婚不结婚吧就会爆米花股份精彩纷呈化工厂规范化看电视教后反思f</a>
+                <span class="label label-default fr showtime">2017.10.05</span>
+            </li>
+            <li class="list-group-item">
+                <a href="" class="eassy-title">结婚不结婚吧就会爆米花股份精彩纷呈化工厂规范化看电视教后反思f</a>
+                <span class="label label-default fr showtime">2017.10.05</span>
+            </li>
+            <li class="list-group-item">
+                <a href="" class="eassy-title">结婚不结婚吧就会爆米花股份精彩纷呈化工厂规范化看电视教后反思f</a>
+                <span class="label label-default fr showtime">2017.10.05</span>
+            </li>
+            <li class="list-group-item">
+                <a href="" class="eassy-title">结婚不结婚吧就会爆米花股份精彩纷呈化工厂规范化看电视教后反思f</a>
+                <span class="label label-default fr showtime">2017.10.05</span>
+            </li>
+            <li class="list-group-item">
+                <a href="" class="eassy-title">结婚不结婚吧就会爆米花股份精彩纷呈化工厂规范化看电视教后反思f</a>
+                <span class="label label-default fr showtime">2017.10.05</span>
+            </li>
+            <li class="list-group-item">
+                <a href="" class="eassy-title">结婚不结婚吧就会爆米花股份精彩纷呈化工厂规范化看电视教后反思f</a>
+                <span class="label label-default fr showtime">2017.10.05</span>
+            </li>
+        </ul>
+    </div>
+    <div class="eassy-page">
+        <ul class="pagination page-list">
+            <li>
+                <a href="#" aria-label="Previous">
+                    <span aria-hidden="true">&laquo;</span>
+                </a>
+            </li>
+            <li class="active"><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+            <li>
+                <a href="#" aria-label="Next">
+                    <span aria-hidden="true">&raquo;</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+</div>
+<script src="js/jquery-1.10.2.min.js"></script>
+<script>
+    $(function(){
+        $(".page-list li").click(function(){
+            $(this).addClass("active").siblings().removeClass("active");
+        });
+        $("#mynav li").click(function(){
+            $(this).addClass("now").siblings().removeClass("now");
+        })
+    })
+</script>
+</body>
+</html>
