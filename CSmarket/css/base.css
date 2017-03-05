@@ -5,4 +5,4 @@ li{ list-style:none;}
 .fr{ float:right;}
 a{color: #9d9d9d;}
 a:hover,a:visited,a:link{text-decoration:none;}
-li{list-style: none;}
+ul{ margin:0px; padding:0px; list-style-type:none;}

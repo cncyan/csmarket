@@ -1,5 +1,5 @@
-/*头部导航*/
-.headertop{overflow: hidden; top: 0; left: 0;height: 40px; position: fixed; background: #f5f5f5; text-align:center; width: 100%;}
+/*头部导航 position: fixed;*/
+.headertop{overflow: hidden; top: 0; left: 0;height: 40px; background: #f5f5f5; text-align:center; width: 100%;}
 .mynav{overflow: hidden; margin-top: 10px;}
 .mynav li{display: inline-block; height: 28px; line-height: 28px; padding-left: 3px; padding-right: 3px;}
 .mynav li a{ font-size: 16px; color: #000000;}
