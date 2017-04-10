@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>release service</title>
+    <title>sigle service</title>
     <link rel="stylesheet" href="css/com.css">
-    <link rel="stylesheet" href="css/serveneed.css">
+    <link rel="stylesheet" href="css/siglesev.css">
 </head>
 <body>
 <div id="header" class="clearfix">
@@ -154,82 +154,62 @@
         </div>
     </div><!--/.header-main-->
 </div>
-<div class="headertop">
+
+<div class="headertop" id="expheadertop">
     <ul class="mynav" id="mynav">
         <li class="now"><a href="#">服务商库 |</a></li>
         <li><a href="#">需求大厅 |</a></li>
         <li><a href="#">代办中心 |</a></li>
         <li><a href="#">CyanScikit自营 |</a></li>
+        <li><a href="#">发布服务 |</a></li>
         <li><a href="#">发布需求 |</a></li>
-        <li><a href="#">发布需求 </a></li>
+        <li><a href="#">CSM动态 |</a></li>
+        <li><a href="#">创客故事 </a></li>
     </ul>
 </div>
-<div class="service-cantainer">
-    <div class="service-title"><h3>编辑需求</h3></div>
-    <div class="service-content">
-        <div class="scontent-list">
-            <form action="" method="post"  class="form-horizontal">
-                <div class="form-group">
-                    <div class="group-con">
-                        <label for="inputbiaoti" class="control-label  col-sm-offset-1  col-sm-2 stitle">标题</label>
-                        <div class="col-sm-7">
-                            <input type="text" class="form-control" name="biaoti" id="inputbiaoti" placeholder="输入你的标题">
-                        </div>
-                    </div>
-                    <div class="group-con">
-                        <label for="inputbiaoti" class="control-label  col-sm-offset-1  col-sm-2 stitle">封面图片</label>
-                        <div class="col-sm-7">
-                            <input type="file" class="btn btn-success fileinput-button" name="inputtuxiang" id="inputtuxiang" placeholder="选择封面图片">
-                        </div>
-                    </div>
-                    <div class="group-con">
-                        <label for="inputleibie" class="control-label  col-sm-offset-1  col-sm-2 stitle">类别</label>
-                        <div class="col-sm-7">
-                            <select class="form-control" name="leibie" id="inputleibie" placeholder="输入你的类别">
-                                <option>leibie1</option>
-                                <option>leibie1</option>
-                                <option>leibie1</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="group-con">
-                        <label for="inputbaojia" class="control-label  col-sm-offset-1  col-sm-2 stitle">报价</label>
-                        <div class="col-sm-7">
-                            <input type="text" class="form-control" name="baojia" id="inputbaojia" placeholder="输入你的报价">
-                        </div>
-                    </div>
-                    <div class="group-con">
-                        <label for="inputneed" class="control-label  col-sm-offset-1  col-sm-2 stitle">需求或服务</label>
-                        <div class="col-sm-7">
-                            <input type="text" class="form-control" name="need" id="inputneed" placeholder="输入你的需求或服务">
-                        </div>
-                    </div>
-                    <div class="group-con">
-                        <label for="inputtuoguan" class="control-label  col-sm-offset-1  col-sm-2 stitle">托管方</label>
-                        <div class="col-sm-7">
-                            <input type="text" class="form-control" name="tuoguan" id="inputtuoguan" placeholder="输入你的托管方">
-                        </div>
-                    </div>
-                    <div class="group-con">
-                        <label for="inputjiaoyi" class="control-label  col-sm-offset-1  col-sm-2 stitle">是否交易</label>
-                        <div class="col-sm-7">
-                            <input type="text" class="form-control" name="jiaoyi" id="inputjiaoyi" placeholder="输入是或否">
-                        </div>
-                    </div>
-                    <div class="group-con">
-                        <label for="inputmiaoshu" class="control-label  col-sm-offset-1  col-sm-2 stitle">描述</label>
-                        <div class="col-sm-7">
-                            <textarea class="form-control" name="miaoshu" id="inputmiaoshu" ></textarea>
-                            <br>
-                            <input class="btn btn-danger fl talking-no" type="button" name="cancel" value="重置内容">
-                            <input class="btn btn-success fr talking-yes" type="submit" name="submit" value="我要留言">
-                        </div>
-                    </div>
-                </div>
-            </form>
+
+<div class="ssv-cantainer">
+    <div class="ssv-top">
+        <div class="ssv-top-left">
+            <h3><span>标题：</span>安下心四川省</h3>
+            <img src="imgs/one.jpg" alt="服务图片">
+            <div class="selfname"><span><b>联系人：</b>Thinkgamer</span></div>
+            <div class="self">
+                <button id="clickself">点击查看联系方式</button>
+                <ul class="selfdesc">
+                    <li><span>微信：</span>gyt13342445911</li>
+                    <li><span>Q  Q：</span>1923361654</li>
+                    <li><span>电话：</span>17191077634</li>
+                </ul>
+
+            </div>
+        </div>
+        <div class="ssv-top-right">
+            <ul>
+                <li>类别：<span>web开发</span></li>
+                <li>报价：<span>9999</span></li>
+                <li>发布时间：<span>web开发</span></li>
+                <li>发布人：<span>thinkgamer</span></li>
+                <li>浏览次数：<span>web开发</span></li>
+                <li>托管方：<span>9999</span></li>
+                <li>是否交易成功：<span>web开发</span></li>
+                <li>需求or服务：<span>9999</span></li>
+            </ul>
         </div>
     </div>
-</div>
+    <div class="ssv-btm">
+        <div class="ssv-btm-mes">
+            <h3>具体描述</h3>
+            <div>
+                <ul>
+                    <li>1cxassssdddddddddddwqddqwddddsadsdc</li>
+                    <li>1csdc</li>
+                    <li>1csdc</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>                                        <!--此处为本页面主要部分-->
 
 <script src="js/jquery-1.10.2.min.js"></script>
 <script type="text/javascript" src="js/bootstrap.min.js"></script>

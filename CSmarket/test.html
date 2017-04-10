@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>jQuery分页</title>
+    <style type="text/css" rel="stylesheet">
+        .page{
+            display:none;
+        }
+        #pagnation a{
+            padding-right:5px;
+        }
+        .current {
+            color:blue;
+        }
+        #pagnation{
+            margin-top:20px;
+        }
+        .numlink,#prev,#next
+        {
+            background-color: #F5F5F5;
+            border: 1px solid #EBEBEB;
+            color: #0072BC;
+            font-weight: normal;
+            margin-left: 10px;
+            padding: 2px 7px;
+            text-decoration: none;
+            width: 22px;;
+        }
+        .current
+        {
+            background-color: #DDEEFF;
+            border: 1px solid #BBDDFF;
+            color: #0072BC;
+            cursor: default;
+            margin-left: 10px;
+            padding: 2px 7px;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+<div id="content">
+        <ul>
+            <li>                                                                <!--此处循环输出我的需求-->
+                <img src="imgs/logo.jpg" alt="商品图片">
+                <ul>
+                    <li><span>标题：</span>新的打算</li>
+                    <li><span>价格：</span>99999</li>
+                    <li><span>服务类别：</span>web开发</li>
+                </ul>
+                <a href="#">详细信息</a>
+            </li>
+            <li>
+                <img src="imgs/logo.jpg" alt="商品图片">
+                <ul>
+                    <li><span>标题：</span>新的打算</li>
+                    <li><span>价格：</span>99999</li>
+                    <li><span>服务类别：</span>web开发</li>
+                </ul>
+                <a href="#">详细信息</a>
+            </li>
+            <li>                                                                <!--此处循环输出我的需求-->
+                <img src="imgs/logo.jpg" alt="商品图片">
+                <ul>
+                    <li><span>标题：</span>新的打算</li>
+                    <li><span>价格：</span>99999</li>
+                    <li><span>服务类别：</span>web开发</li>
+                </ul>
+                <a href="#">详细信息</a>
+            </li>
+            <li>
+                <img src="imgs/logo.jpg" alt="商品图片">
+                <ul>
+                    <li><span>标题：</span>新的打算</li>
+                    <li><span>价格：</span>99999</li>
+                    <li><span>服务类别：</span>web开发</li>
+                </ul>
+                <a href="#">详细信息</a>
+            </li>
+        </ul>
+    <div id="pagnation">
+    </div>
+</div>
+<script type="text/javascript" src="http://www.codefans.net/ajaxjs/jquery1.3.2.js"></script>
+<script type="text/javascript">
+    var _Pages = $('#content').children("ul").children("li");
+    var _Nav = $('#pagnation');
+    function createLinks(){
+        _Nav.append('<a href="#" id="prev">Prev</a>');
+        for(var i=0;i<_Pages.length;i++){
+            _Nav.append('<a href="#" class="numlink">'+(i+1)+'</a>');
+        }
+        _Nav.append('<a href="#" id="next">Next</a>');
+    }
+    function process(now,_Prev,_Next){
+        $('.page:eq('+now+')').css('display','block');
+        $('.numlink:eq('+now+')').addClass('current');
+        var total = parseInt(_Pages.length - 1);
+        if(now == 0){
+            _Prev.hide();
+            _Next.show();
+        }
+        else if(now == total){
+            _Prev.show();
+            _Next.hide();
+        }
+        else {
+            _Prev.show();
+            _Next.show();
+        }
+    }
+    function hideAll(){
+        _Pages.css('display','none');
+        $('.numlink').removeClass('current');
+    }
+    $(document).ready(function(){
+        //set the first one display none
+        $('.page:eq(0)').css('display','block');
+        createLinks();
+        $('.numlink:eq(0)').addClass('current');
+        var _Next = $('#next');
+        var _Prev = $('#prev');
+        var _Link = $('.numlink');
+        _Prev.hide();
+        var now =  parseInt($('.numlink').index($('.current')));
+        _Next.click(function(){
+            hideAll();
+            process(now+1,_Prev,_Next);
+            now = parseInt($('.numlink').index($('.current')));
+        });
+        _Prev.click(function(){
+            hideAll();
+            process(now-1,_Prev,_Next);
+            now = parseInt($('.numlink').index($('.current')));
+        })
+        _Link.click(function(){
+            var that = $(this);
+            hideAll();
+            var which = that.index() - 1;
+            process(which,_Prev,_Next);
+            now = parseInt($('.numlink').index($('.current')));
+        })
+    })
+</script>
+</body>
+</html>
+
+</body>
+</html>

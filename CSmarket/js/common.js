@@ -29,4 +29,27 @@ $(function(){
             ('.golist>ul').hide();
         }
     );
-})
+    //导航栏固定
+    $(window).scroll(function(){
+        var top=$(window).scrollTop();
+        if(top>=58){
+            $("#expheadertop").addClass("fix");
+            $("#expheadertop").css({color:"red",top:0});
+        }else{
+            $("#expheadertop").removeClass("fix");}
+    });
+    //service_one页面联系信息弹出
+    $("#clickself").click(function(){
+        $(".selfdesc").toggle();
+    });
+    //personal页面切换
+    $(".left-thing>ul>li").click(function(){
+        var i=$(this).index();
+      $(this).addClass("liact").siblings().removeClass("liact");
+        $(".thing-con>div").eq(i).show().siblings().hide();
+    });
+       //分页切换
+    $(".pageshow li").click(function(){
+        $(this).addClass("actnum").siblings().removeClass("actnum");
+    });
+});
